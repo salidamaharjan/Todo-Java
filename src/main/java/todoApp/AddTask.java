@@ -17,8 +17,11 @@ public class AddTask {
         String userTask = scanner.nextLine();
         todoTasks.setThingsTodo(userTask);
         List<String> listOfTasks = todoTasks.getThingsTodo();
+        System.out.println("Todo List");
+        int i = 1;
         for (String task : listOfTasks) {
-            System.out.println(task);
+            System.out.println(i + ". " + task);
+            i++;
         }
     }
 }
