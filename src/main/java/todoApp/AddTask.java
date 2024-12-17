@@ -5,11 +5,9 @@ import java.util.Scanner;
 
 public class AddTask {
     private final TodoTasks todoTasks;
-    AddEditDeleteTasks options;
 
     public AddTask() {
         todoTasks = new TodoTasks();
-        options = new AddEditDeleteTasks();
     }
 
     public void addTask() {
@@ -22,8 +20,5 @@ public class AddTask {
         for (String task : listOfTasks) {
             System.out.println(task);
         }
-        options.addEditDeleteTasks();
-
-        scanner.close();
     }
 }
