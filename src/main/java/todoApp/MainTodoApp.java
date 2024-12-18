@@ -2,7 +2,9 @@ package todoApp;
 
 public class MainTodoApp {
     public static void main(String[] args) {
-    AddEditDeleteTasks userChoice = new AddEditDeleteTasks();
+        CreateTodoListFile file = new CreateTodoListFile();
+        file.createTodoListFile();
+        AddEditDeleteTasks userChoice = new AddEditDeleteTasks();
         userChoice.ask();
     }
 }
