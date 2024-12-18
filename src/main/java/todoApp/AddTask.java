@@ -1,5 +1,6 @@
 package todoApp;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -13,8 +14,8 @@ public class AddTask {
         System.out.print("Enter a task: ");
         String userTask = scanner.nextLine();
         try {
-            FileWriter fileWriter = new FileWriter("todoList.txt");
-            fileWriter.write(userTask);
+            FileWriter fileWriter = new FileWriter("todoList.txt", true);
+            fileWriter.write(userTask + "\n");
             fileWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
