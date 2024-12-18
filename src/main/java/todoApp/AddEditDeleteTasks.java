@@ -7,10 +7,12 @@ public class AddEditDeleteTasks {
 
     private final AddTask addTask;
     private final ViewTasks viewTasks;
+    private final EditTask editTask;
 
     public AddEditDeleteTasks() {
         addTask = new AddTask();
         viewTasks = new ViewTasks();
+        editTask = new EditTask();
     }
 
     public void ask() {
@@ -57,7 +59,7 @@ public class AddEditDeleteTasks {
                 addTask.addTask();
                 break;
             case 3:
-                System.out.println(3);
+                editTask.showTasks();
                 break;
             case 4:
                 System.out.println(4);

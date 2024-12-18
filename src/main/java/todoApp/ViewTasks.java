@@ -12,11 +12,9 @@ public class ViewTasks {
             File fileWriter = new File("todoList.txt");
             Scanner scanner = new Scanner(fileWriter);
             System.out.println("Your Todo Tasks:");
-            int i = 1;
             while (scanner.hasNextLine()) {
-                String task = scanner.nextLine();
-                System.out.println( i + ". " + task);
-                i++;
+                String userTask = scanner.nextLine();
+                System.out.println(userTask);
             }
             System.out.println();
             scanner.close();

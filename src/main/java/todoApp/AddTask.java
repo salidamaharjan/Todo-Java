@@ -20,7 +20,7 @@ public class AddTask {
         task.setTaskName(userTask);
         try {
             FileWriter fileWriter = new FileWriter("todoList.txt", true);
-            fileWriter.write(userTask + "\n");
+            fileWriter.write(task.getId() + ". " + userTask + "\n");
             fileWriter.close();
             System.out.println();
             System.out.println("Task successfully wrote to the file.");
