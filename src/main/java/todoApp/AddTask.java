@@ -1,29 +1,14 @@
 package todoApp;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
 import java.util.Scanner;
 
 public class AddTask {
-    private int id = 0;
-    private String taskName;
-
-    public int getId() {
-        return this.id;
-    }
-
-    public String getTaskName(){
-        return this.taskName;
-    }
-
-    public void setTaskName(String taskName){
-        this.taskName = taskName;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    private final Task task;
+    public AddTask() {
+        task = new Task();
     }
     public void addTask() {
         Scanner scanner = new Scanner(System.in);
@@ -31,8 +16,8 @@ public class AddTask {
         System.out.print("Enter a task: ");
 
         String userTask = scanner.nextLine();
-        setId(getId() + 1);
-
+        task.setId(task.getId() + 1);
+        task.setTaskName(userTask);
         try {
             FileWriter fileWriter = new FileWriter("todoList.txt", true);
             fileWriter.write(userTask + "\n");
