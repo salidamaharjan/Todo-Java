@@ -8,7 +8,6 @@ public class AddEditDeleteTasks {
     private final AddTask addTask;
     private final ViewTasks viewTasks;
 
-
     public AddEditDeleteTasks() {
         addTask = new AddTask();
         viewTasks = new ViewTasks();
