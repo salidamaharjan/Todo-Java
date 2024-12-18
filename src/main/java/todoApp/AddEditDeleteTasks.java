@@ -37,6 +37,7 @@ public class AddEditDeleteTasks {
         System.out.print("Enter 1 or 2 or 3 or 4 or 5: ");
         int num = scanner.nextInt();
         scanner.nextLine();
+        System.out.println();
         return num;
     }
 
@@ -49,7 +50,6 @@ public class AddEditDeleteTasks {
 
         switch (userNum) {
             case 1:
-                System.out.println("1");
                 viewTasks.viewTasks();
                 break;
             case 2:

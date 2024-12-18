@@ -13,23 +13,18 @@ public class AddTask {
 
         System.out.print("Enter a task: ");
         String userTask = scanner.nextLine();
+
         try {
             FileWriter fileWriter = new FileWriter("todoList.txt", true);
             fileWriter.write(userTask + "\n");
             fileWriter.close();
-            System.out.println("Successfully wrote to the file.");
+            System.out.println();
+            System.out.println("Task successfully wrote to the file.");
+            System.out.println();
         } catch (IOException e) {
             System.out.println("An error occurred.");
             System.out.println(e.getMessage());
-
         }
 
-//        List<String> listOfTasks = todoTasks.getThingsTodo();
-//        System.out.println("Todo List");
-//        int i = 1;
-//        for (String task : listOfTasks) {
-//            System.out.println(i + ". " + task);
-//            i++;
-//        }
     }
 }
