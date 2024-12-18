@@ -3,3 +3,4 @@ Cook
 Laundry
 Wash
 Fry
+Vacuum Clean

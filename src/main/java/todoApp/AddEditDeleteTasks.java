@@ -21,6 +21,8 @@ public class AddEditDeleteTasks {
         } else {
             while (userNum != 5) {
                 action(userNum);
+                System.out.println("Press enter to continue: ");
+                scanner.nextLine();
                 userNum = askToChoose();
             }
         }
