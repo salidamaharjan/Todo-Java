@@ -8,10 +8,10 @@ public class ViewTasks {
         todoLists = new TodoTasks();
     }
     public void viewTasks() {
-        List<String> listOfTasks = todoLists.getThingsTodo();
-        for (String task : listOfTasks) {
-            System.out.print(task);
-        }
+//        List<String> listOfTasks = todoLists.getThingsTodo();
+//        for (String task : listOfTasks) {
+//            System.out.print(task);
+//        }
     }
 
 }
