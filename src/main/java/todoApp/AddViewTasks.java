@@ -2,17 +2,15 @@ package todoApp;
 
 import java.util.Scanner;
 
-public class AddEditDeleteTasks {
+public class AddViewTasks {
     Scanner scanner = new Scanner(System.in);
 
     private final AddTask addTask;
     private final ViewTasks viewTasks;
-    private final EditTask editTask;
 
-    public AddEditDeleteTasks() {
+    public AddViewTasks() {
         addTask = new AddTask();
         viewTasks = new ViewTasks();
-        editTask = new EditTask();
     }
 
     public void ask() {
@@ -34,10 +32,8 @@ public class AddEditDeleteTasks {
         System.out.println("What do you want to do?: ");
         System.out.println("1. View Tasks");
         System.out.println("2. Add Task");
-        System.out.println("3. Edit Task");
-        System.out.println("4. Delete Task");
-        System.out.println("5. Exit");
-        System.out.print("Enter 1 or 2 or 3 or 4 or 5: ");
+        System.out.println("3. Exit");
+        System.out.print("Enter 1 or 2 or 3: ");
         int num = scanner.nextInt();
         scanner.nextLine();
         System.out.println();
@@ -46,8 +42,8 @@ public class AddEditDeleteTasks {
 
     public void action(int userNum) {
 
-        if (userNum != 1 && userNum != 2 && userNum != 3 && userNum != 4) {
-            System.out.print("Please enter 1 or 2 or 3 or 4 or 5: ");
+        if (userNum != 1 && userNum != 2 && userNum != 3) {
+            System.out.print("Please enter 1 or 2 or 3: ");
             userNum = scanner.nextInt();
         }
 
@@ -59,10 +55,7 @@ public class AddEditDeleteTasks {
                 addTask.addTask();
                 break;
             case 3:
-                editTask.showTasks();
-                break;
-            case 4:
-                System.out.println(4);
+                System.out.println("Exiting");
                 break;
         }
     }

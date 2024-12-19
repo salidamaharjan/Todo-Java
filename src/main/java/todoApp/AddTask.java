@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 public class AddTask {
     private final Task task;
+
     public AddTask() {
         task = new Task();
     }
+
     public void addTask() {
         Scanner scanner = new Scanner(System.in);
 
